@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+       <title>Next-Word-Prediction</title>
+    <style type="text/css" media="all">
+</style>
+</head>
+<body>
+        <div class="fixed-header">
+        <div class="container">
+                <h1 align="center">Next  Word  Prediction</h1>
+        </div>
+    </div>
+    <div class="input-div-form">
+        <h3> Lets Predict The Next Word</h3>
+    <form action="expresion" method="post">
+    {% csrf_token %}
+        <input type="text" class="input-box-1" name="text1" placeholder="Enter your text here...." required/>
+  <br/>
+  <input type="submit" class="predict-word" value=">> Predict <<">
+        <br/>
+    <div class="output">
+        <h3>{{result}}</h3>
+    </div>
+    </form>
+        </div>
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+				<h3><span>PROJECT</span></h3>
+
+				<ul class="footer-links">
+              <li>Machine Learning Project</li>
+              <li>B.tech 3rd year (5th Semester)</li>
+              <li>Department of CSE</li>
+              <li>KNIT, Sultanpur.</li>
+            </ul>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					  <p>About Project</p>
+                       <h4>   <span>
+                          Next Word Prediction
+                          or what is also called
+                          Language Modeling is the
+                          task of predicting what
+                          word comes next.It is one
+                          of the fundamental tasks
+                          of NLP and has many applications.
+                          You might be using it daily when
+                          you write texts or emails without
+                          realizing it.
+                      </span>
+                    </h4>
+                </div>
+
+				</div>
+			</div>
+			<div class="footer-right">
+                <h4 align="center">Our Team</h4>
+                <div class="footer-icons">
+             <ul>
+                <li>Pankaj Kumar - 18230</li>
+              <li>Muskan Gupta - 18228</li>
+              <li>Prakhar Katiyar - 18231</li>
+              <li>Palendra Singh - 18229</li>
+            </ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
+
